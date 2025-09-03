@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reservación</title>
+<style>
+    body {
+        font-family: Montserrat, sans-serif;
+        background-color: #c7a17a;
+        margin: 0;
+        padding: 20px;
+        color: #333;
+    }
+    h1 { text-align: center; color: #7b4f1e; }
+    form {
+        max-width: 500px;
+        margin: 20px auto;
+        background-color: #f9d56e;
+        padding: 20px;
+        border-radius: 12px;
+    }
+    label { display: block; margin-top: 15px; font-weight: bold; }
+    input, textarea, select {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border-radius: 6px;
+        border: 1px solid #aaa;
+        box-sizing: border-box;
+    }
+    .boton {
+        display: inline-block;
+        background-color: #f9d56e;
+        color: #333;
+        padding: 12px 20px;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 8px;
+        margin-top: 20px;
+        transition: transform 0.3s ease;
+    }
+    .boton:hover { transform: scale(1.1); }
+</style>
+</head>
+<body>
+
+<h1>📅 Haz tu Reservación</h1>
+
+<form action="https://formspree.io/f/tu-form-id" method="POST">
+    <label for="nombre">Nombre completo:</label>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <label for="personas">Número de personas:</label>
+    <input type="number" id="personas" name="personas" min="1" required>
+
+    <label for="fecha">Fecha de la reservación:</label>
+    <input type="date" id="fecha" name="fecha" required>
+
+    <label for="hora">Hora:</label>
+    <input type="time" id="hora" name="hora" required>
+
+    <label for="alergias">Alergias o restricciones:</label>
+    <textarea id="alergias" name="alergias" rows="3"></textarea>
+
+    <label for="atencion">Atenciones especiales:</label>
+    <textarea id="atencion" name="atencion" rows="3"></textarea>
+
+    <button type="submit" class="boton">Enviar Reservación</button>
+</form>
+
+<div style="text-align:center;">
+    <a href="index.html" class="boton">Regresar a Inicio</a>
+</div>
+
+</body>
+</html>
